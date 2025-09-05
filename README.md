@@ -27,11 +27,11 @@ This lab involves me building a cloud-based Security Operations Center (SOC) usi
 1. Create an Azure Resource Group
   - Log in to the Azure Portal
   - Create a new resource group (e.g., RG-SOCLab) in your local region.
-<br />
+
 2. Set Up a Virtual Network (VNet)
   - Within that resource group, create a VNet (e.g., VN-SOCLab).
   - Ensure the VNet uses the same Azure region as your resource group.
-<br />
+
 3. Deploy a Windows VM
   - Add a new VM:
       1. Choose the Windows 10 22H2 image.
