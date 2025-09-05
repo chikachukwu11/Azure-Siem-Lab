@@ -74,8 +74,11 @@ This lab involves me building a cloud-based Security Operations Center (SOC) usi
   Example query snippet:
   <br />
   let GeoIPDB_FULL = _GetWatchlist("geoip");
+  <br />
   SecurityEvent
+  <br />
   | where EventID == 4625
+  <br />
   | evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)
 
 10. <b>Build a Visual Workbook (Map)</b>
