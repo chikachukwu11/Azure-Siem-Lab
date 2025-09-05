@@ -1,10 +1,8 @@
 # Azure-Siem-Lab
 <h2>Description</h2>
 This lab involves me building a cloud-based Security Operations Center (SOC) using a free Azure subscription and Microsoft Sentinel. The objective is to simulate a real-world environment where I can ingest security logs, analyze failed login attempts, and visualize attacker geolocation in near‑real time. By completing this lab, I learned how to set up cloud infrastructure, configure logging and SIEM tools, and create visual insights on attack activity—all within a controlled, self‑contained environment.
-
-<img src="https://i.imgur.com/a/U56bbLN.png" height="80%" width="80%" alt="AzureSiemLab"/>
-
 <br />
+<img src="https://i.imgur.com/ktViphJ.png" height="80%" width="80%" alt="AzureSiemLab"/>
 
 <h2>Enviroments and Utilities</h2>
 
@@ -51,22 +49,60 @@ This lab involves me building a cloud-based Security Operations Center (SOC) usi
     2. Add a rule allowing all inbound traffic (Source: Any, Destination: Any, Protocol: Any).
     3. Name it something like DANGER_AllowAnyCustomAnyInbound.
 
+<img src="https://i.imgur.com/qPEPYyO.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
 5. <b>Disable Windows Firewall</b>
   - Log in to the VM (via RDP using your credentials).
   - Open wf.msc (Windows Firewall settings) and turn off all profiles (Domain, Private, Public).
 
+<img src="https://i.imgur.com/3YD0iyP.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/POr1hxv.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/kGjv3RE.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/FPYtQxo.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/tMdOjeX.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/F36NE0h.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/pjH9xEd.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/45kU8M4.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/WivcIAE.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
 6. <b>Generate Failed Login Events</b>
   - In the VM, attempt several failed RDP logins with incorrect credentials.
   - Use Event Viewer to confirm Event ID 4625 (failed login entries) logs are being logged.
+
+<img src="https://i.imgur.com/vBV69pJ.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/DNc8UeS.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/soKSaIz.png" height="80%" width="80%" alt="AzureSiemLab"/>
 
 7. <b>Connect Azure Sentinel</b>
   - Navigate to Azure Sentinel and attach it to your Log Analytics Workspace.
   - Install the Windows Security Events from the Content Hub via the AMA connector.
   - Enable data collection for your VM.
 
+<img src="https://i.imgur.com/WFapH6o.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/t7yT7Po.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/iOSXO6a.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
 8. <b>Upload Geo‑IP Watchlist</b>
   - Download or prepare a CSV that maps IP addresses to geolocation (latitude/longitude, city, country).
   - Create a watchlist in Sentinel named geoip and upload the CSV.
+
+<img src="https://i.imgur.com/5YTEflW.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/C6jIy2u.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
+<img src="https://i.imgur.com/ssFxJvz.png" height="80%" width="80%" alt="AzureSiemLab"/>
 
 9. <b>Run Geolocation KQL Query</b>
   - In Log Analytics, run a query that.
@@ -89,8 +125,11 @@ This lab involves me building a cloud-based Security Operations Center (SOC) usi
   - Add the KQL with summary and map visualization: count failures per IP and map coordinates.
   - Use the JSON advanced editor to configure the map layout, color scale, and labels.
 
+<img src="https://i.imgur.com/S5yNPJ3.png" height="80%" width="80%" alt="AzureSiemLab"/>
+
 11. <b>Observe and Analyze</b>
   - Let the system run for 30 minutes to accumulate data.
   - Observe attacker locations popping up on the map.
   - Optionally, review again after 24 hours to see the expansion of data. 
   
+<img src="https://i.imgur.com/kt0YxfR.png" height="80%" width="80%" alt="AzureSiemLab"/>
