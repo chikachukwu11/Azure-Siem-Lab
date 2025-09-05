@@ -2,7 +2,7 @@
 <h2>Description</h2>
 This lab involves me building a cloud-based Security Operations Center (SOC) using a free Azure subscription and Microsoft Sentinel. The objective is to simulate a real-world environment where I can ingest security logs, analyze failed login attempts, and visualize attacker geolocation in near‑real time. By completing this lab, I learned how to set up cloud infrastructure, configure logging and SIEM tools, and create visual insights on attack activity—all within a controlled, self‑contained environment.
 
-<img src="https://i.imgur.com/a/U56bbLN.png" height="80%" width="80%" alt="AzureSiemLab"/>
+<img src="https://imgur.com/a/U56bbLN" height="80%" width="80%" alt="AzureSiemLab"/>
 <br />
 
 <h2>Enviroments and Utilities</h2>
