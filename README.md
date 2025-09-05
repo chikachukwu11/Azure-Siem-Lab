@@ -72,6 +72,7 @@ This lab involves me building a cloud-based Security Operations Center (SOC) usi
     3. Performs an IPv4 lookup to enrich IPs with geolocation.
   
   Example query snippet:
+  <br />
   let GeoIPDB_FULL = _GetWatchlist("geoip");
   SecurityEvent
   | where EventID == 4625
