@@ -40,7 +40,7 @@ This lab involves me building a cloud-based Security Operations Center (SOC) usi
       1. Enable deletion of public IP and NIC when VM is removed (for cleanup).
       2. Connect the VM to VN-SOCLab.
   
-<img src="https://imgur.com/a/Lf7W1TQ" height="80%" width="80%" alt="AzureSiemLab"/>
+<img src="https://imgur.com/3GVEkZG" height="80%" width="80%" alt="AzureSiemLab"/>
 
 4. <b>Harden/Loosen Security (Intentionally Weak Setup)</b>
   - In the VM’s NSG inbound rules:
