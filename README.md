@@ -55,8 +55,6 @@ This lab involves me building a cloud-based Security Operations Center (SOC) usi
   - Log in to the VM (via RDP using your credentials).
   - Open wf.msc (Windows Firewall settings) and turn off all profiles (Domain, Private, Public).
 
-<img src="https://i.imgur.com/3YD0iyP.png" height="80%" width="80%" alt="AzureSiemLab"/>
-
 <img src="https://i.imgur.com/POr1hxv.png" height="80%" width="80%" alt="AzureSiemLab"/>
 
 <img src="https://i.imgur.com/kGjv3RE.png" height="80%" width="80%" alt="AzureSiemLab"/>
